@@ -1,11 +1,3 @@
-/*
-P18.1
-从顺序表中删除具有最小值的元素(假设唯一)并由函数返回被删元素的值。
-空出的位置由最后一个元素填补, 若顺序表为空则显示出错信息并退出运行
-P18.2
-设计一个高效算法，将顺序表L的所有元素逆置，要求算法的空间复杂度为O(1)
-*/
-
 #include <cstdio>
 #include <iostream>
 #include <algorithm>
@@ -30,6 +22,10 @@ void swap(int* a, int* b) {
 	*b = t;
 }
 
+/*
+P18.2
+设计一个高效算法，将顺序表L的所有元素逆置，要求算法的空间复杂度为O(1)
+*/
 //给定一个List，传入List的大小，要逆转的起始位置
 void Reserve(List* list, int start, int end, int size) {
 	if (end <= start || end >= size) {
@@ -50,6 +46,11 @@ void PrintList(List list) {
 
 #pragma endregion
 
+/*
+P18.1
+从顺序表中删除具有最小值的元素(假设唯一)并由函数返回被删元素的值。
+空出的位置由最后一个元素填补, 若顺序表为空则显示出错信息并退出运行
+*/
 int FindMin(List& list)
 {
 	if (!list.length) {
