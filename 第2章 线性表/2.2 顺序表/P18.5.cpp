@@ -63,6 +63,25 @@ void DeleteS_T(List& list, int S, int T) {
 	}
 }
 
+//方法2：从前向后扫描顺序表L，用k记录下元素值在s到t之间元素的个数（初始时k=0）。
+//对于当前扫描的元素，若其值不在s到1之间，则前移k个位置；
+//否则执行k++。由于这样每个不在s到t之间的元素仅移动一次，因此算法效率高。
+bool Del s t2（SqList ＆L，ElemType s，ElemType t）｛
+int i，j；
+if （s>=t！L.length==0）
+return false；
+for（i=0；i<L.length＆＆L.data［i］<s；i++）；//寻找值大于等于s的第一个元素
+if（i>=L.length）
+return false；
+//所有元素值均小于s，返回
+for（j=i；j<L.length＆＆L.data［j］<=t；j++）；//寻找值大于t的第一个元素
+for（；j<L.length；i++，j++）
+L.data［i］=L.data［j］；
+//前移，填补被删元素位置
+L.length=i；
+return true；
+｝
+
 int main()
 {
 	List list;
