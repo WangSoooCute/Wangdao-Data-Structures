@@ -59,6 +59,20 @@ void OlderlyDeleteSame(List& list) {
 	}
 }
 
+//方法2:
+bool Delete Same （SeqList＆L）｛
+
+if（L.length==0） return false；
+int i，j;//i存储第一个不相同的元素，j为工作指针
+for（i=0，j=1；j<L.length；j++）
+if（L.data［i］！=L.data［j］）//查找下一个与上个元素值不同的元素
+L.data［++i］=L.data［j］；//找到后，将元素前移
+L.length=i+1；
+return true
+｝
+
+//方法3：如果将本题的有序表改为无序表，你能想到时间复杂度为（n）的方法吗？：使用散列表
+
 int main()
 {
 	List list;
