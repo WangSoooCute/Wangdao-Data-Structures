@@ -42,7 +42,7 @@ void PrintList(List list) {
 
 #pragma endregion
 
-//P19.5
+//P18.5
 //从顺序表中删除其值在给定值s与t之间(包含s和t, 要求s < t)的所有元素,
 //如果s或t不合理或顺序表为空, 则显示出错信息并退出运行
 
