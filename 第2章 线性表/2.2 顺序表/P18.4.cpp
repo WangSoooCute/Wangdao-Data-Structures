@@ -42,10 +42,11 @@ void PrintList(List list) {
 
 #pragma endregion
 
-//P19.4
+//P18.4
 //从有序顺序表中删除其值在给定值s与t之间(要求s < t)的所有元素, 如果s或t不合
 //理或顺序表为空, 则显示出错信息并退出运行
 
+//算法思想：先寻找值大于等于s的第一个元素（第一个删除的元素），然后寻找值大于t的第一个元素（最后一个删除的元素的下一个元素），要将这段元素删除，只需直接将后面的元素前移
 void OrderlyDelete(List& list, int X, int T) {
 	int i = 0, j = 0;
 	for (i; i < list.length; i++)
